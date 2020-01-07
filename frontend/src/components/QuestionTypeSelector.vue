@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-form-group :label="currentQuestion.message" v-if="currentQuestion.isWhen">
+    <b-form-group :label="currentQuestion.message" v-if="currentQuestion.isWhen && currentQuestion.isVisible">
       <GeneratorSelection
         v-if="currentQuestion.type==='generators'"
         :currentQuestion="currentQuestion"
