@@ -123,6 +123,9 @@ export class YeomanUIPanel {
 						const resolve = this.questionsResolutions.get(message.taskId);
 						resolve(message.data);
 						return;
+					case 'showInformationMessage':
+						vscode.window.showInformationMessage("myTest");
+						return;
 					case 'vscodecommand':
 						this.theia.isInTheia().then((value) => {
 							let commandName = _.get(message, "commandName");
